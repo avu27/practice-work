@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    // 1. Метод вывода титульной информации (изменено под ваши данные)
     public static void printHello() {
         System.out.println("=========================================");
         System.out.println("ФИО: Урбан Александра Вадимовна");
