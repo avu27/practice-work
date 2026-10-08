@@ -86,9 +86,40 @@ public class Main {
         System.out.printf("Результат функции f(x) = %.4f%n", res64);
     }
 
-    // ГЛАВНЫЙ МЕТОД С ИНТЕРАКТИВНЫМ МЕНЮ
+    // ГЛАВНЫЙ МЕТОД
     public static void main(String[] args) {
         printHello();
+        if (args.length > 0) {
+            try {
+                // args[0] -> ребро куба, args[1] -> площадь круга, args[2..4] -> 3 числа, args[5] -> x
+                if (args.length >= 1) {
+                    double a5 = Double.parseDouble(args[0]);
+                    double[] res5 = task05(a5);
+                    System.out.printf("Задача 5: Объем V = %.4f; Поверхность S = %.4f%n", res5[0], res5[1]);
+                }
+                if (args.length >= 2) {
+                    double s15 = Double.parseDouble(args[1]);
+                    double[] res15 = task15(s15);
+                    System.out.printf("Задача 15: Диаметр D = %.4f; Длина окружности L = %.4f%n", res15[0], res15[1]);
+                }
+                if (args.length >= 5) {
+                    int n1 = Integer.parseInt(args[2]);
+                    int n2 = Integer.parseInt(args[3]);
+                    int n3 = Integer.parseInt(args[4]);
+                    int[] res45 = task45(n1, n2, n3);
+                    System.out.printf("Задача 45: Положительных: %d; Отрицательных: %d%n", res45[0], res45[1]);
+                }
+                if (args.length >= 6) {
+                    double x64 = Double.parseDouble(args[5]);
+                    System.out.printf("Задача 64: f(x) = %.4f%n", task64(x64));
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Ошибка при разборе переданных чисел: " + e.getMessage());
+            }
+            System.out.println("\nРасчет завершен.");
+            return; //
+        }
+
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Выберите задачу для запуска:");

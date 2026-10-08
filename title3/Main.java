@@ -36,7 +36,7 @@ class Baggage {
     public String getFlight() { return flight; }
     public boolean isFragile() { return fragile; }
 
-    // Переопределение метода toString() для красивого вывода
+    // Переопределение метода toString()
     @Override
     public String toString() {
         return String.format("Багаж [Бирка: %s, Вес: %.2f кг, Рейс: %s, Хрупкий: %s]",
