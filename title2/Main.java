@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Вывод информации об исполнителе
     public static void printHello() {
         System.out.println("=========================================");
         System.out.println("ФИО: Урбан Александра Вадимовна");
@@ -13,7 +12,6 @@ public class Main {
         System.out.println();
     }
 
-    // --- МЕТОДЫ ЗАДАЧ ---
 
     public static int task058(int a, int b, int c) {
         if (a == b) return 3;
