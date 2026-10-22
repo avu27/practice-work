@@ -2,6 +2,7 @@ package title4;
 
 // Импортируем встроенные инструменты тестирования JUnit
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ApplianceTest {

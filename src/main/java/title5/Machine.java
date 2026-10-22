@@ -1,4 +1,4 @@
-package title5.title5;
+package title5;
 
 // 1. Абстрактный базовый класс
 public abstract class Machine {
