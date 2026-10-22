@@ -13,7 +13,7 @@ public class Fridge extends Appliance {
 
     @Override
     public void powerOn() {
-        System.out.printf("Холодильник %s загудел компрессором. Начинается охлаждение %d литров объема.%n",
+        System.out.printf("У холодильника %s загудел компрессор. Начинается охлаждение %d литров объема.%n",
                 getBrand(), volume);
     }
 }

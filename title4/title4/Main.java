@@ -25,7 +25,7 @@ public class Main {
         printHello();
 
         // 3. Массив базового типа из >= 5 объектов разных наследников
-        Appliance[] devices = new Appliance[] {
+        Appliance[] devices = new Appliance[]{
                 new Fridge("Bosch", 200.0, 350),
                 new Washer("LG", 1800.0, 1200),
                 new Oven("Gorenje", 3000.0, 275),
