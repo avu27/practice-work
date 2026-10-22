@@ -10,8 +10,13 @@ public abstract class Machine {
         this.efficiencyFactor = efficiencyFactor;
     }
 
-    public String getName() { return name; }
-    public double getEfficiencyFactor() { return efficiencyFactor; }
+    public String getName() {
+        return name;
+    }
+
+    public double getEfficiencyFactor() {
+        return efficiencyFactor;
+    }
 
     // Абстрактный метод расчёта производительности
     public abstract double throughput();

@@ -16,7 +16,7 @@ public class Main {
         printHello();
 
         // Подготовка массива объектов разных наследников
-        Machine[] factoryFloor = new Machine[] {
+        Machine[] factoryFloor = new Machine[]{
                 new Press("Гидравлик-3000", 0.90, 45),
                 new Conveyor("Главная Лента Сборки", 0.95, 1.2),
                 new CNC("Фрезер-5-Осей", 0.85, 5),
