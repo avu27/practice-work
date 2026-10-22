@@ -1,4 +1,4 @@
-package title5;
+package title5.title5;
 
 public class Press extends Machine implements Startable, Maintainable {
     private final int strokesPerMinute; // Количество ударов пресса в минуту

@@ -1,4 +1,4 @@
-package title5;
+package title5.title5;
 
 @FunctionalInterface
 public interface Calculation {

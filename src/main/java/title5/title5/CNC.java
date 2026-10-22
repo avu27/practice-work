@@ -1,4 +1,4 @@
-package title5;
+package title5.title5;
 
 public class CNC extends Machine implements Startable, Maintainable {
     private final int numberOfAxes; // Количество осей обработки (например, 3-осевой, 5-осевой)

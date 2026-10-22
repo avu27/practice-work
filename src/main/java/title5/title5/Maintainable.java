@@ -1,4 +1,4 @@
-package title5;
+package title5.title5;
 
 public interface Maintainable {
     void performMaintenance();

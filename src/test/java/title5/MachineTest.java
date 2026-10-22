@@ -3,6 +3,7 @@ package title5;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import title5.title5.*;
 
 class MachineTest {
 

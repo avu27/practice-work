@@ -1,4 +1,4 @@
-package title5;
+package title5.title5;
 
 public class Conveyor extends Machine implements Startable {
     private final double beltSpeedMps; // Скорость ленты в метрах в секунду
