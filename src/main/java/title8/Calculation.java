@@ -1,4 +1,9 @@
 package title8;
 
-public class Calculation {
+/**
+ * Универсальный функциональный интерфейс (Пункт 3 Стандартных интерфейсов).
+ */
+@FunctionalInterface
+public interface Calculation<T> {
+    double calculate(T value);
 }
