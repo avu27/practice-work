@@ -7,12 +7,11 @@ import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 
 public class Main {
-    // Пункт 6: Режим debug. Если true — выводим подробный stack trace ошибок на экран
+    // Режим debug. Если true — выводим подробный stack trace ошибок на экран
     private static final boolean DEBUG_MODE = true;
     private static final String LOG_FILE_PATH = "log.txt";
 
-    /**
-     * Пункт 5: Запись успешных операций в файл log.txt (UTF-8, Append).
+    /** Запись успешных операций в файл log.txt (UTF-8, Append).
      */
     private static void writeLog(String logMessage) {
         try {
@@ -24,7 +23,7 @@ public class Main {
                     StandardOpenOption.APPEND
             );
         } catch (IOException e) {
-            System.err.println("🚨 Ошибка записи лога в файл: " + e.getMessage());
+            System.err.println(" Ошибка записи лога в файл: " + e.getMessage());
         }
     }
 
@@ -88,17 +87,17 @@ public class Main {
                         break;
 
                     default:
-                        System.out.println("🚨 Неверный ввод! Пожалуйста, выберите пункт от 1 до 4.");
+                        System.out.println("Неверный ввод! Пожалуйста, выберите пункт от 1 до 4.");
                 }
 
             } catch (ExcessBaggageException e) {
                 // Перехват проверяемого исключения перевеса (Программа продолжает работу)
-                System.out.println("❌ ОТКАЗ В РЕГИСТРАЦИИ: " + e.getMessage());
+                System.out.println(" ОТКАЗ В РЕГИСТРАЦИИ: " + e.getMessage());
                 if (DEBUG_MODE) { e.printStackTrace(); }
 
             } catch (IllegalArgumentException e) {
                 // Перехват ошибок неверного формата парсинга чисел и кодов бирок
-                System.out.println("❌ ОШИБКА ВВОДА/ФОРМАТА: " + e.getMessage());
+                System.out.println(" ОШИБКА ВВОДА/ФОРМАТА: " + e.getMessage());
                 if (e.getCause() != null) {
                     System.out.println("   -> Первопричина системы (Cause): " + e.getCause());
                 }
@@ -106,7 +105,7 @@ public class Main {
 
             } catch (Exception e) {
                 // Глобальный перехват непредвиденных сбоев для обеспечения устойчивости программы
-                System.out.println("❌ КРИТИЧЕСКИЙ СИСТЕМНЫЙ СБОЙ: " + e.getMessage());
+                System.out.println(" КРИТИЧЕСКИЙ СИСТЕМНЫЙ СБОЙ: " + e.getMessage());
                 if (DEBUG_MODE) { e.printStackTrace(); }
             }
         }

@@ -47,7 +47,7 @@ public class Stack<T> {
     }
 
     /**
-     * Метод выталкивания элементов по правилу PECS (Consumer Super — Пункт 5).
+     * Метод выталкивания элементов по правилу PECS.
      * Стек выступает производителем, а коллекция-приемник — потребителем (Consumer).
      */
     public void popAll(Collection<? super T> dst) {

@@ -1,7 +1,7 @@
 package title8;
 
 /**
- * Универсальный функциональный интерфейс (Пункт 3 Стандартных интерфейсов).
+ * Универсальный функциональный интерфейс.
  */
 @FunctionalInterface
 public interface Calculation<T> {

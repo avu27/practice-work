@@ -12,7 +12,7 @@ public class Baggage {
     }
 
     /**
-     * Бизнес-метод регистрации багажа (Пункт 2).
+     * Бизнес-метод регистрации багажа.
      * Проверяет инвариант: weight <= limit. При нарушении бросает checked-исключение.
      */
     public void checkIn(double limit) throws ExcessBaggageException {
@@ -25,7 +25,7 @@ public class Baggage {
     }
 
     /**
-     * Метод разбора числового кода из тега багажа (Пункт 3).
+     * Метод разбора числового кода из тега багажа.
      * При неверном текстовом формате бросает IllegalArgumentException со вложенной причиной.
      */
     public static int parseTag(String tagStr) {

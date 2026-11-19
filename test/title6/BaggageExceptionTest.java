@@ -10,7 +10,7 @@ class BaggageExceptionTest {
 
     @Test
     void testCheckInThrowsExcessBaggageException() {
-        // 1. Тест проверяемого (checked) исключения перевеса (Вариант №18)
+        // 1. Тест проверяемого (checked) исключения перевеса
         // Создаем багаж весом 35 кг при норме лимита 23 кг
         Baggage heavyBaggage = new Baggage("TA-999", 35.0, "SU-100");
 
@@ -22,7 +22,7 @@ class BaggageExceptionTest {
 
     @Test
     void testParseTagThrowsIllegalArgumentExceptionWithCause() {
-        // 2. Тест обработки неверного формата строки (Пункт 3)
+        // 2. Тест обработки неверного формата строки
         String invalidTag = "ABC-строковые-буквы";
 
         // Проверяем, что метод parseTag бросает именно IllegalArgumentException

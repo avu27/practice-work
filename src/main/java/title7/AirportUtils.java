@@ -2,10 +2,7 @@ package title7;
 
 public class AirportUtils {
 
-    /**
-     * Алгоритм верификации скобочных последовательностей через Stack различных символов.
-     * Служит для проверки синтаксиса вложенных диспетчерских команд логов Аэропорта.
-     */
+
     public static Pair<Boolean, String> checkBrackets(String expression) {
         Stack<Character> stack = new Stack<>(); // Обобщенная структура Stack<Character> (Пункт 2 и 4)
 

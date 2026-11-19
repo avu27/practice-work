@@ -47,7 +47,7 @@ public class Main {
                 lineNum++;
                 String[] parts = line.split(";");
                 if (parts.length != 4) {
-                    System.out.println("⚠️ Пропуск битой строки №" + lineNum + ": '" + line + "'");
+                    System.out.println("Пропуск битой строки №" + lineNum + ": '" + line + "'");
                     continue;
                 }
                 try {
@@ -57,7 +57,7 @@ public class Main {
                     int humidity = Integer.parseInt(parts[3].trim());
                     list.add(new Reading(station, date, temp, humidity));
                 } catch (NumberFormatException e) {
-                    System.out.println("⚠️ Пропуск битой строки №" + lineNum + " (ошибка формата чисел): '" + line + "'");
+                    System.out.println("Пропуск битой строки №" + lineNum + " (ошибка формата чисел): '" + line + "'");
                 }
             }
         } catch (IOException e) {
@@ -68,14 +68,14 @@ public class Main {
         // 2. Группировка по метеостанциям
         System.out.println("\n[ЗАДАНИЕ 3] Группировка Map<String, List<Reading>> по станциям:");
         Map<String, List<Reading>> map = new HashMap<>();
+
         for (Reading r : list) {
-            if (!map.containsKey(r.getStation())) {
-                map.put(r.getStation(), new ArrayList<>());
-            }
-            map.get(r.getStation()).add(r);
+            List<Reading> group = map.computeIfAbsent(r.getStation(), station -> new ArrayList<>());
+            group.add(r);
         }
+
         for (Map.Entry<String, List<Reading>> entry : map.entrySet()) {
-            System.out.println(" Станция '" + entry.getKey() + "' имеет записей: " + entry.getValue().size());
+            System.out.println("Станция'" + entry.getKey() + "' имеет записей: " + entry.getValue().size());
         }
 
         // 3. Множество уникальных дат

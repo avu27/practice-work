@@ -20,7 +20,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         if (args.length > 0) {
-            System.out.println("Обнаружены аргументы запуска. Режим автоматической загрузки...\n");
+            System.out.println("Обнаружены аргументы запуска...\n");
             int i = 0;
             while (i + 3 < args.length) {
                 try {

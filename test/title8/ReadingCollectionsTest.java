@@ -13,7 +13,7 @@ class ReadingCollectionsTest {
         testList.add(new Reading("TestStation", "2026-11-01", 10.0, 70));
         testList.add(new Reading("TestStation", "2026-11-02", -5.5, 80));
 
-        Calculation<Reading> tempCalc = (r) -> r.getTemp();
+        Calculation<Reading> tempCalc = Reading::getTemp;
 
         double sum = Main.sum(testList, tempCalc);
         assertEquals(4.5, sum, 1e-9, "Обобщенный метод sum работает некорректно!");
@@ -21,7 +21,7 @@ class ReadingCollectionsTest {
 
     @Test
     void testGenericSumWithEmptyListReturnsZero() {
-        Calculation<Reading> tempCalc = (r) -> r.getTemp();
+        Calculation<Reading> tempCalc = Reading::getTemp;
         double sum = Main.sum(new ArrayList<>(), tempCalc);
         assertEquals(0.0, sum, 1e-9, "Для пустого списка сумма обязана быть равной 0.0!");
     }

@@ -24,7 +24,7 @@ public class ApplianceTest {
         Appliance myFridge = new Fridge("Samsung", 150.0, 410);
 
         // Проверяем логику instanceof для духовки
-        assertTrue(myOven instanceof Oven, "Объект Духовки должен распознаваться как Oven");
+        assertInstanceOf(Oven.class, myOven, "Объект Духовки должен распознаваться как Oven");
         assertFalse(myFridge instanceof Oven, "Объект Холодильника НЕ должен распознаваться как Oven");
     }
 }

@@ -5,7 +5,7 @@ public class Fridge extends Appliance {
     private final int volume; // Объем камеры в литрах
 
     public Fridge(String brand, double power, int volume) {
-        super(brand, power); // Вызов super в конструкторе
+        super(brand, power); // Вызов конструктора Appliance
         this.volume = volume;
     }
 

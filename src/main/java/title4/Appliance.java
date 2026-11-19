@@ -2,8 +2,8 @@ package title4;
 
 // 1. Базовый класс (не final)
 public class Appliance {
-    private final String brand;
-    private final double power; // Мощность в Ваттах
+    protected final String brand;
+    protected final double power; // Мощность в Ваттах
 
     public Appliance(String brand, double power) {
         this.brand = brand;
