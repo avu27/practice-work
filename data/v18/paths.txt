@@ -1,0 +1,6 @@
+/var/log/nginx/
+/etc/hosts
+/home/user/documents/
+/usr/bin/java
+/opt/tomcat/webapps/
+/tmp/backup.tar.gz
